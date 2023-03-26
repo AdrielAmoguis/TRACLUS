@@ -57,13 +57,13 @@ where `x` is the x-coordinate, and `y` is the y-coordinate for each point `n`.
 ### Running the Algorithm in Your Own Script File
 
 ```python
-from traclus import traclus
+from traclus import traclus as tr
 
 # Your Trajectory Data
 trajectories = ...
 
 # Run the TRACLUS Algorithm
-partitions, segments, dist_matrix, clusters, cluster_assignments, representative_trajectories = traclus(trajectories)
+partitions, segments, dist_matrix, clusters, cluster_assignments, representative_trajectories = tr.traclus(trajectories)
 ```
 
 The `partitions` variable will contain all the trajectories that are partitioned by the algorithm into their characteristic points (cp).
@@ -92,7 +92,7 @@ Trajectories are treated as directional by default, but this can be changed by p
 Such as:
 
 ```python
-partitions, segments, dist_matrix, clusters, cluster_assignments, representative_trajectories = traclus(trajectories, directional=False)
+partitions, segments, dist_matrix, clusters, cluster_assignments, representative_trajectories = tr.traclus(trajectories, directional=False)
 ```
 
 ### Clustering Parameters
