@@ -3,7 +3,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='traclus-python',
-    version='1.0.1',
+    version='1.0.2',
     license='apache-2.0',
     author="Adriel Isaiah Amoguis",
     author_email='adriel.isaiah.amoguis@gmail.com',
