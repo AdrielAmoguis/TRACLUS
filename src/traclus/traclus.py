@@ -252,7 +252,8 @@ def minimum_desription_length(start_idx, curr_idx, trajectory, w_angular=1, w_pe
     """
     LH = LDH = 0
     for i in range(start_idx, curr_idx-1):
-        LH += np.log2(d_euclidean(trajectory[i], trajectory[i+1]))
+        ed = d_euclidean(trajectory[i], trajectory[i+1])
+        LH += max(0, np.log2(ed, where=ed>0))
         if par:
             for j in range(start_idx, i-1):
                 # print()
